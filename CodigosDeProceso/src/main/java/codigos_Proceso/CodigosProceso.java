@@ -26,7 +26,8 @@ public class CodigosProceso {
 			String codigo = ctx.pathParam("codigo");
 			String proceso = ctx.pathParam("proceso");
 
-			String type=CodigoProceso(codigo,proceso);
+			CodigosProceso codigosProceso= new CodigosProceso();			
+			String type=codigosProceso.codigoProceso(codigo, proceso);
 			
 			// muestro el resultado
 			if (type != null && type != "") {
@@ -46,7 +47,7 @@ public class CodigosProceso {
 	 * @param proceso es el tipo de transaccion
 	 * 
 	 */
-	public static String CodigoProceso(String codigo, String proceso) {
+	public  String codigoProceso(String codigo, String proceso) {
 		// busco el json en la direccion http
 		jsonFromURL jsonFromURL = new jsonFromURL();
 		String strJson = jsonFromURL.getJSONFromURL("http://localhost:8080/json/codigo_de_proceso_v1.json");
