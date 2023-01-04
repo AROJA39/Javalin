@@ -6,46 +6,51 @@ import org.junit.Test;
 
 public class CodigosProcesoTest {
 
-	/*@Test
+	@Test
 	public void bientestCodigoProceso1() {
 		CodigosProceso codigosProceso= new CodigosProceso();			
-		String type=codigosProceso.codigoProceso("231000","DEVOLUCION_DE_CANJE");
-		assertEquals("Para Ahorros", type);
+		String type=codigosProceso.codigoProceso("141000");
+		assertEquals("Ajuste De Anticipos En Efectivo Cuenta De Ahorros", type);
 	}
 
 	@Test
 	public void bientestCodigoProceso2() {
 		CodigosProceso codigosProceso= new CodigosProceso();			
-		String type=codigosProceso.codigoProceso("001000","COMPRAS_POS");
-		assertEquals("Compra normal con Cuenta de Ahorros", type);
+		String type=codigosProceso.codigoProceso("4020242O");
+		assertEquals("Depósito De Cuenta Corriente A Cuenta Corriente-Internet-Original", type);
 	}
 
 	@Test
 	public void bientestCodigoProceso3() {
 		CodigosProceso codigosProceso= new CodigosProceso();			
-		String type=codigosProceso.codigoProceso("890000","CONSULTA_DE_COSTO_DE_LA_TX");
-		assertEquals("Consulta", type);
+		String type=codigosProceso.codigoProceso("4010142D");
+		assertEquals("Depósito De Cuenta Ahorros A Cuenta Ahorros-Internet-Devolución", type);
 	}
 
 	@Test
 	public void maltestCodigoProceso1() {
 		CodigosProceso codigosProceso= new CodigosProceso();			
-		String type=codigosProceso.codigoProceso("2310000","DEVOLUCION_DE_CANJE");
-		assertEquals("Para Ahorros", type);
+		String type=codigosProceso.codigoProceso("14100");
+		assertEquals("Ajuste De Anticipos En Efectivo Cuenta De Ahorros", type);
 	}
 
 	@Test
 	public void maltestCodigoProceso2() {
 		CodigosProceso codigosProceso= new CodigosProceso();			
-		String type=codigosProceso.codigoProceso("****","COMPRAS_POS");
-		assertEquals("Compra normal con Cuenta de Ahorros", type);
+		String type=codigosProceso.codigoProceso("4020242D");
+		assertEquals("Depósito De Cuenta Corriente A Cuenta Corriente-Internet-Original", type);
 	}
 
 	@Test
 	public void maltestCodigoProceso3() {
 		CodigosProceso codigosProceso= new CodigosProceso();			
-		String type=codigosProceso.codigoProceso("890000","CONSULTA_DE_COSTO_DE_");
-		assertEquals("Consulta", type);
+		String type=codigosProceso.codigoProceso("4010142O");
+		assertEquals("Depósito De Cuenta Ahorros A Cuenta Ahorros-Internet-Devolución", type);
 	}
-*/
+	@Test
+	public void maltestCodigoProceso4() {
+		CodigosProceso codigosProceso= new CodigosProceso();			
+		String type=codigosProceso.codigoProceso("14100*");
+		assertEquals("Ajuste De Anticipos En Efectivo Cuenta De Ahorros", type);
+	}
 }

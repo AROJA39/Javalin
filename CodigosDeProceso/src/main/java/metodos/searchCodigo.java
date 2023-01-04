@@ -1,6 +1,5 @@
 package metodos;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -17,12 +16,9 @@ public class searchCodigo {
 	public String getsearchCodigo(String codigo, String strJson) {
 		try {
 			JSONParser parser = new JSONParser();
-			Object obj = parser.parse(strJson);
-			 
-			JSONObject jsonObject = (JSONObject) obj;
-	 
-			String nombre = (String) jsonObject.get(codigo);
-			
+			Object obj = parser.parse(strJson);			 
+			JSONObject jsonObject = (JSONObject) obj;	 
+			String nombre = (String) jsonObject.get(codigo);			
 			return nombre;
 		} catch (Exception ex) {
 			System.out.println("Error" + ex.getMessage());
