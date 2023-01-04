@@ -6,7 +6,7 @@ import metodos.searchCodigo;
 
 /**
  * 
- * Esta clase obtiene el proceso y codigo ingresado, para buscarlo en el JSON
+ * Esta clase obtiene el  codigo ingresado, para buscarlo en el JSON
  * 
  * @author: Adriana Rojas
  * @version: 22/12/2022
@@ -15,7 +15,7 @@ import metodos.searchCodigo;
 public class CodigosProceso {
 
 	/**
-	 * ingresar en al navegador http://localhost:8000/DEPOSITOS_CUENTA/211000
+	 * ingresar en al navegador http://localhost:8000/141000
 	 * 
 	 * 
 	 */
@@ -43,8 +43,6 @@ public class CodigosProceso {
 	 * metodo Codigo de proceso, va la la direccion http y busca el codigo 
 	 * 
 	 * @param codigo  que se desea encontrar dentro del proceso
-	 * @param proceso es el tipo de transaccion
-	 * @param proceso es el tipo de transaccion
 	 * 
 	 */
 	public  String codigoProceso(String codigo) {

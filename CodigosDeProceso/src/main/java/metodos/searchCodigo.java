@@ -5,10 +5,9 @@ import org.json.simple.parser.JSONParser;
 
 public class searchCodigo {
 	/**
-	 * metodo searchCodigo busca dentro del json el proceso y el codigo
+	 * metodo searchCodigo busca dentro del json el  codigo
 	 * 
 	 * @param codigo que se desea encontrar dentro del proceso
-	 * @param proceso es el tipo de transaccion
 	 * @param strJson llega todo el json 
 	 * @return String del codigo encontrado, de lo contrario un vacio
 	 * 
@@ -18,8 +17,8 @@ public class searchCodigo {
 			JSONParser parser = new JSONParser();
 			Object obj = parser.parse(strJson);			 
 			JSONObject jsonObject = (JSONObject) obj;	 
-			String nombre = (String) jsonObject.get(codigo);			
-			return nombre;
+			String type = (String) jsonObject.get(codigo);			
+			return type;
 		} catch (Exception ex) {
 			System.out.println("Error" + ex.getMessage());
 			return "";
