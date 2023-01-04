@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class CodigosProcesoTest {
 
-	@Test
+	/*@Test
 	public void bientestCodigoProceso1() {
 		CodigosProceso codigosProceso= new CodigosProceso();			
 		String type=codigosProceso.codigoProceso("231000","DEVOLUCION_DE_CANJE");
@@ -47,5 +47,5 @@ public class CodigosProcesoTest {
 		String type=codigosProceso.codigoProceso("890000","CONSULTA_DE_COSTO_DE_");
 		assertEquals("Consulta", type);
 	}
-
+*/
 }

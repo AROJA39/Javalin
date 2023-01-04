@@ -14,26 +14,20 @@ public class searchCodigo {
 	 * @return String del codigo encontrado, de lo contrario un vacio
 	 * 
 	 */	
-	public String getsearchCodigo(String codigo, String proceso, String strJson) {
+	public String getsearchCodigo(String codigo, String strJson) {
 		try {
 			JSONParser parser = new JSONParser();
-			Object object = parser.parse(strJson);
-			JSONObject mainJsonObject = (JSONObject) object;
-
-			JSONArray jsonArrayCodigoProceso = (JSONArray) mainJsonObject.get(proceso);
-
-			for (int i = 0; i < jsonArrayCodigoProceso.size();) {
-				JSONObject jsonCodigoProceso = (JSONObject) jsonArrayCodigoProceso.get(i);
-
-				String type = (String) jsonCodigoProceso.get(codigo);
-				System.out.println(codigo + " " + type);
-				return type;
-			}
+			Object obj = parser.parse(strJson);
+			 
+			JSONObject jsonObject = (JSONObject) obj;
+	 
+			String nombre = (String) jsonObject.get(codigo);
+			
+			return nombre;
 		} catch (Exception ex) {
 			System.out.println("Error" + ex.getMessage());
 			return "";
 
 		}
-		return "";
 	}//Cierre del método
 }

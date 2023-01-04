@@ -21,19 +21,19 @@ public class CodigosProceso {
 	 */
 	public static void main(String[] args) {
 		Javalin app = Javalin.create().start(8000);
-		app.get("/:proceso/:codigo", ctx -> {
+		app.get("/:codigo", ctx -> {
 
 			String codigo = ctx.pathParam("codigo");
-			String proceso = ctx.pathParam("proceso");
+			//String proceso = ctx.pathParam("proceso");
 
 			CodigosProceso codigosProceso= new CodigosProceso();			
-			String type=codigosProceso.codigoProceso(codigo, proceso);
+			String type=codigosProceso.codigoProceso(codigo);
 			
 			// muestro el resultado
 			if (type != null && type != "") {
-				ctx.result(proceso + ": " + codigo + " -  " + type);
+				ctx.result( codigo + " -  " + type);
 			} else {
-				ctx.result("No Existe el " + proceso + " con " + codigo);
+				ctx.result("No Existe el " + codigo);
 			}
 
 		});// Cierre del javalin
@@ -47,14 +47,14 @@ public class CodigosProceso {
 	 * @param proceso es el tipo de transaccion
 	 * 
 	 */
-	public  String codigoProceso(String codigo, String proceso) {
+	public  String codigoProceso(String codigo) {
 		// busco el json en la direccion http
 		jsonFromURL jsonFromURL = new jsonFromURL();
 		String strJson = jsonFromURL.getJSONFromURL("http://localhost:8080/json/codigo_de_proceso_v1.json");
 
 		// busco el codigo dentro del .json
 		searchCodigo searchCodigo = new searchCodigo();
-		String type = searchCodigo.getsearchCodigo(codigo, proceso, strJson);
+		String type = searchCodigo.getsearchCodigo(codigo, strJson);
 		return type;
 
 	}
