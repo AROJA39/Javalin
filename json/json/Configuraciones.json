@@ -1,0 +1,9 @@
+{
+
+	"FESTIVOS" : ".\\json\\DiasFestivos.json",
+
+	"DATOS_PRUEBA" : ".\\json\\DatosPrueba.json",
+
+	"EXCEPTION" : ".\\json\\Exception.json"
+
+}

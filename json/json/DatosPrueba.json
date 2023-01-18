@@ -1,0 +1,253 @@
+[{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "1230080001",
+		"fechaCompensacion": "1231",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "0101220002",
+		"fechaCompensacion": "0102",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "1231180036",
+		"fechaCompensacion": "0101",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "0102173003",
+		"fechaCompensacion": "0103",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "0103040204",
+		"fechaCompensacion": "0104",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "0719010005",
+		"fechaCompensacion": "0720",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "0721180006",
+		"fechaCompensacion": "0722",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "0806153007",
+		"fechaCompensacion": "0807",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre otra compensacion	",
+		"fechaTransaccion": "0808175008",
+		"fechaCompensacion": "0809",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "1230080009",
+		"fechaCompensacion": "1230",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "0101220010",
+		"fechaCompensacion": "0101",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "1231180011",
+		"fechaCompensacion": "1231",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "0102173012",
+		"fechaCompensacion": "0102",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "0103040213",
+		"fechaCompensacion": "0103",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "0719010014",
+		"fechaCompensacion": "0719",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "0721180015",
+		"fechaCompensacion": "0721",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "0806153016",
+		"fechaCompensacion": "0806",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "En cierre misma compensacion	",
+		"fechaTransaccion": "0808175017",
+		"fechaCompensacion": "0808",
+		"cierreActivo": "SI",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "1230080018",
+		"fechaCompensacion": "1231",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "0101220019",
+		"fechaCompensacion": "0102",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "1231180020",
+		"fechaCompensacion": "0101",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "0102173021",
+		"fechaCompensacion": "0103",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "0103040222",
+		"fechaCompensacion": "0104",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "0719010023",
+		"fechaCompensacion": "0720",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "0721180024",
+		"fechaCompensacion": "0722",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "0806153025",
+		"fechaCompensacion": "0807",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre otra compensacion	",
+		"fechaTransaccion": "0808175026",
+		"fechaCompensacion": "0809",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "NEXT_DAY"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "1230080027",
+		"fechaCompensacion": "1230",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "0101220028",
+		"fechaCompensacion": "0101",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "1231180029",
+		"fechaCompensacion": "1231",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "0102173030",
+		"fechaCompensacion": "0102",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "0103040231",
+		"fechaCompensacion": "0103",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "0719010032",
+		"fechaCompensacion": "0719",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "0721180033",
+		"fechaCompensacion": "0721",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "0806153034",
+		"fechaCompensacion": "0806",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	},
+	{
+		"comentario": "Fuera cierre misma compensacion	",
+		"fechaTransaccion": "0808175035",
+		"fechaCompensacion": "0808",
+		"cierreActivo": "NO",
+		"resultadoEsperado": "CURRENT"
+	}
+]
