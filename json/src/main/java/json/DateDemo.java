@@ -332,13 +332,17 @@ public class DateDemo {
 					JSONArray datosprueba = mostrardatosprueba();
 					ctx.status(HttpCode.OK).result(datosprueba.toString());
 				} else {
-					ctx.status(HttpCode.OK).contentType(ContentType.JSON).result(getjson(codigo, ""));
+					if (getValue(codigo, "") == "") {
+						ctx.status(HttpCode.INTERNAL_SERVER_ERROR).contentType(ContentType.JSON)
+								.result("El archivo recuperado no se puede procesar.");
+					} else {
+						ctx.status(HttpCode.OK).contentType(ContentType.TEXT_PLAIN).result(getValue(codigo, ""));
+					}
+
 				}
 			} catch (Exception exception) {
-				// getjson("EXCEPTION", exception)
-				// ctx.status(HttpCode.NOT_FOUND).contentType(ContentType.JSON).result("Archivo
-				// no encontrado.");
-				exception.printStackTrace();
+				ctx.status(HttpCode.INTERNAL_SERVER_ERROR).contentType(ContentType.TEXT_PLAIN)
+						.result("El archivo recuperado no se puede procesar.");
 			}
 
 		});// Cierre del javalin
@@ -346,17 +350,16 @@ public class DateDemo {
 			String codigo = ctx.pathParam("codigo");
 			String key = ctx.pathParam("key");
 			try {
-				ctx.status(HttpCode.OK).contentType(ContentType.JSON).result(getjson(codigo, key));
+				ctx.status(HttpCode.OK).contentType(ContentType.TEXT_PLAIN).result(getValue(codigo, key));
 			} catch (Exception exception) {
-				// ctx.status(HttpCode.NOT_FOUND).contentType(ContentType.JSON).result("Archivo
-				// no encontrado.");
-				exception.printStackTrace();
+				ctx.status(HttpCode.INTERNAL_SERVER_ERROR).contentType(ContentType.TEXT_PLAIN)
+						.result("El archivo recuperado no se puede procesar.");
 			}
 
 		});// Cierre del javalin
 	}
 
-	private static String getjson(String codigo, String key) {
+	private static String getValue(String codigo, String key) {
 		try {
 			String ruta = ".\\json\\Configuraciones.json";
 			JSONObject js = (JSONObject) parse(ruta);
@@ -364,8 +367,8 @@ public class DateDemo {
 
 			String ruta2 = firstName;
 			Object js2 = parse(ruta2);
-			ruta2=js2.toString();
-			
+			ruta2 = js2.toString();
+
 			if (key.length() != 0) {
 				JSONObject jsonObject = (JSONObject) js2;
 				String firstName2 = (String) jsonObject.get(key);
@@ -374,7 +377,8 @@ public class DateDemo {
 			return ruta2;
 
 		} catch (Exception e) {
-			e.printStackTrace();
+		//	e.printStackTrace();
+		//	System.out.println(e.getMessage());
 			return "";
 		}
 
