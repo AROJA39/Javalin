@@ -322,11 +322,7 @@ public class DateDemo {
 	public static void main(String args[]) {
 
 		inicializarDatos();
-		// armarDatosTransaccionesPrueba();
-
 		Javalin app = Javalin.create().start(8000);
-
-		// System.out.println(""+(new File(".")).getAbsolutePath());
 
 		app.get("/{codigo}", ctx -> {
 			String codigo = ctx.pathParam("codigo");
@@ -336,29 +332,13 @@ public class DateDemo {
 					JSONArray datosprueba = mostrardatosprueba();
 					ctx.status(HttpCode.OK).result(datosprueba.toString());
 				} else {
-
-					String ruta = ".\\json\\Configuraciones.json";
-
-					JSONObject js = (JSONObject) parse(ruta);
-					String firstName = (String) js.get(codigo);
-					// ctx.result(firstName);
-
-					String ruta2 = firstName;
-					Object js2 = parse(ruta2);
-					// ctx.result(js2.toString());
-					ctx.status(HttpCode.OK).contentType(ContentType.JSON).result(js2.toString());
+					ctx.status(HttpCode.OK).contentType(ContentType.JSON).result(getjson(codigo, ""));
 				}
-			} catch (FileNotFoundException fileNotFoundException) {
-				ctx.status(HttpCode.NOT_FOUND).contentType(ContentType.JSON).result("Archivo no encontrado.");
-			}
-			/*
-			 * catch (PathException pathException){
-			 * ctx.status(HttpCode.NOT_ACCEPTABLE).contentType(ContentType.JSON).result(
-			 * "Ruta no encontrada." ); }
-			 */
-			catch (Exception exception) {
-				ctx.status(HttpCode.INTERNAL_SERVER_ERROR).contentType(ContentType.JSON)
-						.result("El archivo recuperado no se puede procesar.");
+			} catch (Exception exception) {
+				// getjson("EXCEPTION", exception)
+				// ctx.status(HttpCode.NOT_FOUND).contentType(ContentType.JSON).result("Archivo
+				// no encontrado.");
+				exception.printStackTrace();
 			}
 
 		});// Cierre del javalin
@@ -366,33 +346,37 @@ public class DateDemo {
 			String codigo = ctx.pathParam("codigo");
 			String key = ctx.pathParam("key");
 			try {
-				String ruta = ".\\json\\Configuraciones.json";
-
-				JSONObject js = (JSONObject) parse(ruta);
-				String firstName = (String) js.get(codigo);
-
-				String ruta2 = firstName;
-				Object js2 = parse(ruta2);
-				
-				JSONObject jsonObject = (JSONObject) js2;
-				String firstName2 = (String) jsonObject.get(key);
-				String ruta3 = firstName2;
-				
-				ctx.status(HttpCode.OK).contentType(ContentType.JSON).result(ruta3);
-
-			} catch (FileNotFoundException fileNotFoundException) {
-				ctx.status(HttpCode.NOT_FOUND).contentType(ContentType.JSON).result("Archivo no encontrado.");
-			}
-			/*
-			 * catch (PathException pathException){
-			 * ctx.status(HttpCode.NOT_ACCEPTABLE).contentType(ContentType.JSON).result(
-			 * "Ruta no encontrada." ); }
-			 */
-			catch (Exception exception) {
-				ctx.status(HttpCode.INTERNAL_SERVER_ERROR).contentType(ContentType.JSON)
-						.result("El archivo recuperado no se puede procesar.");
+				ctx.status(HttpCode.OK).contentType(ContentType.JSON).result(getjson(codigo, key));
+			} catch (Exception exception) {
+				// ctx.status(HttpCode.NOT_FOUND).contentType(ContentType.JSON).result("Archivo
+				// no encontrado.");
+				exception.printStackTrace();
 			}
 
 		});// Cierre del javalin
+	}
+
+	private static String getjson(String codigo, String key) {
+		try {
+			String ruta = ".\\json\\Configuraciones.json";
+			JSONObject js = (JSONObject) parse(ruta);
+			String firstName = (String) js.get(codigo);
+
+			String ruta2 = firstName;
+			Object js2 = parse(ruta2);
+			ruta2=js2.toString();
+			
+			if (key.length() != 0) {
+				JSONObject jsonObject = (JSONObject) js2;
+				String firstName2 = (String) jsonObject.get(key);
+				ruta2 = firstName2;
+			}
+			return ruta2;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "";
+		}
+
 	}
 }
